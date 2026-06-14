@@ -123,6 +123,7 @@
 
   /* floating arcs */
   .arc{position:absolute;pointer-events:none;z-index:0}
+  .arc svg{overflow:visible}
   .arc svg path,.arc svg line{
     stroke-linecap:round;fill:none;
   }
@@ -172,7 +173,8 @@
     padding:34px 28px;transition:border-color .2s, transform .2s;
   }
   .occ:hover{transform:translateY(-5px)}
-  .occ .emo{font-size:2.2rem;line-height:1;margin-bottom:18px;display:block}
+  .occ .occ-icon{width:46px;height:46px;line-height:0;margin-bottom:18px;display:block}
+  .occ .occ-icon svg{width:46px;height:46px}
   .occ h3{font-family:'Unbounded',sans-serif;font-weight:700;font-size:1.3rem;margin-bottom:10px}
   .occ p{color:rgba(252,250,245,.7);font-size:1rem}
   .occ.o1:hover{border-color:var(--pink)}
@@ -264,10 +266,10 @@
   <div class="arc" style="top:14%;right:5%;width:110px" aria-hidden="true">
     <svg viewBox="0 0 120 120"><path class="draw" d="M110 100 A55 55 0 0 0 30 20" stroke="var(--pink)" stroke-width="11"/></svg>
   </div>
-  <div class="arc" style="top:46%;left:2%;width:80px" aria-hidden="true">
+  <div class="arc" style="top:46%;left:3.5%;width:80px" aria-hidden="true">
     <svg viewBox="0 0 100 60"><path class="draw" d="M5 50 Q30 5 50 30 T95 20" stroke="var(--turq)" stroke-width="10"/></svg>
   </div>
-  <div class="arc" style="bottom:18%;right:3%;width:90px" aria-hidden="true">
+  <div class="arc" style="bottom:18%;right:4.5%;width:90px" aria-hidden="true">
     <svg viewBox="0 0 100 60"><path class="draw" d="M5 30 Q30 60 50 30 T95 40" stroke="var(--green)" stroke-width="10"/></svg>
   </div>
   <div class="arc" style="top:4%;left:46%;width:70px" aria-hidden="true">
@@ -374,17 +376,17 @@
     </div>
     <div class="occ-grid">
       <div class="occ o1 reveal">
-        <span class="emo">🎉</span>
+        <span class="occ-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21v-7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v7"/><path d="M5 16.5c1.2.9 2.3.9 3.5 0s2.3-.9 3.5 0 2.3.9 3.5 0 2.3-.9 3.5 0"/><path d="M12 12V9"/><path d="M12 9c-1-.6-1-2 0-3 1 1 1 2.4 0 3z"/></svg></span>
         <h3>Дни рождения</h3>
         <p>Творческий праздник для детей и взрослых: все при деле, у каждого — результат на память.</p>
       </div>
       <div class="occ o2 reveal">
-        <span class="emo">🥂</span>
+        <span class="occ-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><g transform="rotate(-13 12 12)"><path d="M5 3.5h4l-.6 4.2a1.4 1.4 0 0 1-2.8 0z"/><path d="M7 8.6V17"/><path d="M5.2 17h3.6"/></g><g transform="rotate(13 12 12)"><path d="M15 3.5h4l-.6 4.2a1.4 1.4 0 0 1-2.8 0z"/><path d="M17 8.6V17"/><path d="M15.2 17h3.6"/></g></svg></span>
         <h3>Корпоративы</h3>
         <p>Командное занятие вместо стандартного банкета. Коллеги создают что-то вместе, без неловких пауз.</p>
       </div>
       <div class="occ o3 reveal">
-        <span class="emo">💞</span>
+        <span class="occ-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--turq)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 20.5l-.95-.86C5 16 2.5 13.8 2.5 10.9 2.5 8.6 4.3 7 6.4 7c1.2 0 2.35.55 3.1 1.45C10.25 7.55 11.4 7 12.6 7c2.1 0 3.9 1.6 3.9 3.9 0 2.9-2.5 5.1-6.55 8.74z"/><path d="M18 11.2c2-1.85 3.5-3.25 3.5-5.05 0-1.45-1.15-2.65-2.6-2.65-.85 0-1.6.4-2.1 1-.5-.6-1.25-1-2.1-1" opacity=".55"/></svg></span>
         <h3>Арт-свидания</h3>
         <p>Формат на двоих: рисуете рядом, разговариваете между делом. Тёплый и неочевидный сценарий вечера.</p>
       </div>
